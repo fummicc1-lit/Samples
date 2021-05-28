@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         let calendar = Calendar.current
         let date = Date()
         var components = calendar.dateComponents([.year, .month, .day], from: date)
+        let day = components.day ?? 0
+        components.day = day - 3
         components.calendar = calendar
         
         // 取得するデータの設定
